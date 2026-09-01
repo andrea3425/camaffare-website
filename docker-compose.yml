@@ -1,0 +1,19 @@
+services:
+  camaffare-website:
+    build: .
+    container_name: camaffare-website
+    restart: unless-stopped
+    environment:
+      # Letti dal reverse proxy condiviso (nginx-proxy + acme-companion)
+      # definito nel repo infra separato, non qui.
+      VIRTUAL_HOST: camaffare.com,www.camaffare.com
+      LETSENCRYPT_HOST: camaffare.com,www.camaffare.com
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    # Rete creata dal repo infra (docker-compose del reverse proxy condiviso).
+    # Deve avere lo stesso nome li' dentro, es:
+    #   docker network create proxy
+    external: true
