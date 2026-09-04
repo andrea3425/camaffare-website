@@ -2,26 +2,57 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Camaffare — Sito in costruzione</title>
-  <meta name="description" content="Camaffare, rosticceria e pizzeria siciliana a Padova. Il sito è in costruzione.">
-  <link rel="icon" href="public/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Cama'ffare — Rosticceria e pizzeria siciliana a Padova</title>
+  <meta name="description" content="Cama'ffare: pizze, arancini, fritti, gastronomia e cannoli siciliani a Padova. Guarda il menu o ordina su app, Just Eat, Glovo e Deliveroo.">
+  <meta name="theme-color" content="#e92b2e">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cama'ffare">
+  <meta property="og:title" content="Cama'ffare — Rosticceria e pizzeria siciliana a Padova">
+  <meta property="og:description" content="Pizze, arancini, fritti e cannoli siciliani. Asporto e domicilio a Padova.">
+  <meta property="og:url" content="https://camaffare.it/">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:image" content="public/og-image.jpg">
+
+  <link rel="icon" href="public/logo/logo_red_squared_180.png">
+  <link rel="apple-touch-icon" href="public/logo/logo_red_squared_180.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <main id="app" class="under-construction">
-    <p class="eyebrow">Camaffare</p>
-    <h1>Sito in costruzione</h1>
-    <p class="lead">Rosticceria e pizzeria siciliana a Padova. Torneremo presto online.</p>
-  </main>
+<body class="page-home">
 
-  <footer id="site-footer">
-    <p class="footer-copy">&copy; <span id="footer-year"></span> Camaffare</p>
+<main class="splash">
+  <div class="splash__blob splash__blob--a" aria-hidden="true"></div>
+  <div class="splash__blob splash__blob--b" aria-hidden="true"></div>
+
+  <div class="splash__inner">
+    <img class="splash__logo" src="public/logo/logo_white_360.png" alt="Cama'ffare" width="360" height="131">
+
+    <p class="splash__eyebrow">Rosticceria &amp; pizzeria siciliana · Padova</p>
+    <div class="splash__cta">
+      <a class="btn btn--white btn--block" href="menu.html">
+        Scopri il menu
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn btn--outline-white btn--block" href="ordina.html">
+        Ordina ora
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <footer class="splash__foot">
+    <a href="tel:+390492020021">049 202 0021</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://www.instagram.com/camaffare_padova/" target="_blank" rel="noopener">Instagram</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://maps.google.com/?q=Via+Ludovico+Ariosto+38,+35128+Padova" target="_blank" rel="noopener">Via L. Ariosto 38, Padova</a>
   </footer>
+</main>
 
-  <script src="js/app.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
