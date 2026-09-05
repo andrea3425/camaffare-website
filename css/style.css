@@ -1,7 +1,7 @@
 /* ============================================================
    CAMA'FFARE — stile del sito (responsive first)
    Struttura: 1) token  2) base  3) componenti condivisi
-              4) home   5) menu  5c) foto ingrandita
+              4) home   5) menu  5c) scheda prodotto
               6) ordina  6b) modali
    ============================================================ */
 
@@ -72,6 +72,9 @@ h1, h2, h3 {
 
 p { margin: 0; }
 img { max-width: 100%; display: block; }
+/* senza !important una qualsiasi regola di classe con display: batte
+   il [hidden] del browser e l'elemento resta a schermo */
+[hidden] { display: none !important; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 
@@ -231,7 +234,7 @@ button { font: inherit; }
 
 .splash__logo {
   /* logo_white_512.png e' 512x512 (quadrato): non superare i 512 per non sgranarlo */
-  width: clamp(132px, 38vw, 188px);
+  width: clamp(168px, 48vw, 246px);
   height: auto;
   filter: drop-shadow(0 18px 40px rgba(80,0,0,.32));
 }
@@ -347,7 +350,7 @@ button { font: inherit; }
 @media (max-height: 720px) {
   .splash { gap: 18px; padding-top: 28px; }
   .splash__inner { gap: 12px; }
-  .splash__logo { width: clamp(104px, 30vw, 140px); }
+  .splash__logo { width: clamp(126px, 36vw, 168px); }
   .splash__title { font-size: clamp(1.5rem, 6.5vw, 2rem); }
   .splash__cta { margin-top: 4px; }
   .splash__foot { font-size: .8rem; }
@@ -644,6 +647,7 @@ button { font: inherit; }
 @media (min-width: 900px)  { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 
 .item {
+  position: relative;
   display: flex;
   flex-direction: column;
   background: var(--card);
@@ -658,24 +662,12 @@ button { font: inherit; }
   .item:hover .item__media img { transform: scale(1.06); }
 }
 
-/* con una foto e' un <button>, senza resta un <div>: qui vale per entrambi */
 .item__media {
   position: relative;
-  display: block;
-  width: 100%;
   aspect-ratio: 1 / 1;
-  padding: 0;
-  border: 0;
   overflow: hidden;
   background: var(--rosso-chiaro);
-  font: inherit;
-  color: inherit;
-  text-align: left;
-  cursor: zoom-in;
 }
-.item--senza-foto .item__media { cursor: default; }
-/* il bordo del fuoco va disegnato dentro: la card taglia tutto quello che esce */
-.item__media:focus-visible { outline-offset: -3px; }
 /* la foto va posizionata come il placeholder, altrimenti resterebbe sotto
    (un elemento assoluto vince sempre su uno statico) e si vedrebbe l'icona sopra.
    Cosi' invece l'icona resta visibile solo finche' la foto non e' arrivata. */
@@ -769,6 +761,17 @@ button { font: inherit; }
   color: var(--ink);
 }
 
+/* copre tutta la card: qualunque punto si tocchi si apre la scheda */
+.item__open {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+/* il contorno del fuoco va disegnato dentro: la card taglia cio' che esce */
+.item__open:focus-visible { outline-offset: -3px; border-radius: var(--r-xl); }
+
 .menu-empty {
   padding: 56px 0 20px;
   text-align: center;
@@ -791,8 +794,8 @@ button { font: inherit; }
   .menu-empty { animation: fade-in .3s ease backwards; }
 }
 
-/* ---------- 5c. FOTO INGRANDITA ---------- */
-.lightbox {
+/* ---------- 5c. SCHEDA DEL PRODOTTO ---------- */
+.scheda {
   width: min(100% - 24px, 560px);
   max-height: calc(100dvh - 40px);
   padding: 0;
@@ -803,28 +806,38 @@ button { font: inherit; }
   box-shadow: var(--shadow-lg);
   overflow: hidden;
 }
-.lightbox::backdrop {
+.scheda::backdrop {
   background: rgba(8,8,10,.72);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
 
-.lightbox__fig {
+.scheda__fig {
   display: flex;
   flex-direction: column;
   max-height: calc(100dvh - 40px);
   margin: 0;
 }
 
-.lightbox__img {
+.scheda__img {
   width: 100%;
   max-height: 62dvh;
   object-fit: cover;
   background: var(--rosso-chiaro);
 }
 
+/* prodotto senza foto: stessa icona e stesso colore del placeholder in griglia.
+   Piu' bassa dell'immagine, cosi' la descrizione resta la protagonista */
+.scheda__ph {
+  display: grid;
+  place-items: center;
+  height: 150px;
+  flex: none;
+  font-size: 3.4rem;
+}
+
 /* tondo chiaro sopra alla foto: funziona sia su immagini scure che chiare */
-.lightbox__close {
+.scheda__close {
   position: absolute;
   z-index: 1;
   top: 12px;
@@ -843,26 +856,39 @@ button { font: inherit; }
   box-shadow: 0 4px 14px rgba(8,8,10,.28);
   transition: background-color .16s ease, transform .16s var(--ease);
 }
-.lightbox__close:active { transform: scale(.92); }
+.scheda__close:active { transform: scale(.92); }
 @media (hover: hover) {
-  .lightbox__close:hover { background: #fff; }
+  .scheda__close:hover { background: #fff; }
 }
 
-.lightbox__cap {
+.scheda__cap {
   padding: 18px 20px 22px;
   overflow-y: auto;
 }
-.lightbox__head {
+.scheda__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+/* qui i tag non stanno sopra a una foto: niente ombra, solo il pieno */
+.scheda__tags .tag {
+  background: var(--bg);
+  box-shadow: none;
+}
+.scheda__tags .tag--new { background: var(--ink); }
+
+.scheda__head {
   display: flex;
   align-items: baseline;
   gap: 14px;
 }
-.lightbox__title {
+.scheda__title {
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: -.025em;
 }
-.lightbox__price {
+.scheda__price {
   margin-left: auto;
   flex: none;
   font-family: var(--font-head);
@@ -870,15 +896,15 @@ button { font: inherit; }
   font-size: 1.1rem;
   color: var(--rosso);
 }
-.lightbox__desc {
+.scheda__desc {
   margin-top: 8px;
   color: var(--muted);
   font-size: .95rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .lightbox[open]           { animation: modal-in .28s var(--ease); }
-  .lightbox[open]::backdrop { animation: fade-in .28s ease; }
+  .scheda[open]           { animation: modal-in .28s var(--ease); }
+  .scheda[open]::backdrop { animation: fade-in .28s ease; }
 }
 
 /* ---------- 6. ORDINA ---------- */

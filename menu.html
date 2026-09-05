@@ -68,18 +68,20 @@
   </div>
 </dialog>
 
-<dialog class="lightbox" id="foto-modal" aria-labelledby="foto-modal-title">
-  <figure class="lightbox__fig">
-    <button class="lightbox__close" type="button" data-close aria-label="Chiudi">
+<dialog class="scheda" id="prodotto-modal" aria-labelledby="prodotto-modal-title">
+  <figure class="scheda__fig">
+    <button class="scheda__close" type="button" data-close aria-label="Chiudi">
       <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
-    <img class="lightbox__img" alt="">
-    <figcaption class="lightbox__cap">
-      <div class="lightbox__head">
-        <h2 class="lightbox__title" id="foto-modal-title"></h2>
-        <p class="lightbox__price"></p>
+    <img class="scheda__img" alt="">
+    <span class="scheda__ph" aria-hidden="true" hidden></span>
+    <figcaption class="scheda__cap">
+      <div class="scheda__tags" hidden></div>
+      <div class="scheda__head">
+        <h2 class="scheda__title" id="prodotto-modal-title"></h2>
+        <p class="scheda__price"></p>
       </div>
-      <p class="lightbox__desc"></p>
+      <p class="scheda__desc"></p>
     </figcaption>
   </figure>
 </dialog>

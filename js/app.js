@@ -58,31 +58,29 @@
       .map((t) => `<span class="tag ${t.classe}">${t.testo}</span>`)
       .join('');
 
-    /* la foto viene rimossa dal DOM se il file non esiste: resta il placeholder.
-       In quel caso il riquadro smette anche di essere ingrandibile */
+    /* la foto viene rimossa dal DOM se il file non esiste: resta il placeholder */
     const img = p.foto
       ? `<img src="${p.foto}" alt="${esc(p.nome)}" loading="lazy" decoding="async"
-              onerror="this.closest('.item').classList.add('item--senza-foto'); this.remove()">`
+              onerror="this.remove()">`
       : '';
 
-    /* con una foto il riquadro e' un <button>: si apre da tastiera, non solo col dito */
-    const media = p.foto
-      ? `<button type="button" class="item__media" style="background:${sfondo}"
-                 aria-label="Ingrandisci la foto di ${esc(p.nome)}">`
-      : `<div class="item__media" style="background:${sfondo}">`;
-
+    /* .item__open e' un bottone trasparente steso su tutta la card: rende
+       cliccabile ogni punto e, essendo un vero <button>, si apre anche da
+       tastiera. Un <button> non puo' contenere titoli e paragrafi, quindi sta
+       sopra al contenuto invece di avvolgerlo. */
     return `
-      <article class="item${p.foto ? '' : ' item--senza-foto'}">
-        ${media}
+      <article class="item">
+        <div class="item__media" style="background:${sfondo}">
           <span class="item__ph" aria-hidden="true">${icona}<small>foto in arrivo</small></span>
           ${img}
-          ${tags ? `<span class="item__tags">${tags}</span>` : ''}
-        ${p.foto ? '</button>' : '</div>'}
+          ${tags ? `<div class="item__tags">${tags}</div>` : ''}
+        </div>
         <div class="item__body">
           <h3 class="item__name">${esc(p.nome)}</h3>
           ${p.descrizione ? `<p class="item__desc">${esc(p.descrizione)}</p>` : ''}
           <p class="item__price">${euro.format(p.prezzo)}</p>
         </div>
+        <button type="button" class="item__open" aria-label="Apri ${esc(p.nome)}"></button>
       </article>`;
   }
 
@@ -233,43 +231,63 @@
     });
   }
 
-  /* ---------- foto ingrandita ---------- */
-  const foto = document.getElementById('foto-modal');
+  /* ---------- scheda del prodotto ---------- */
+  const scheda = document.getElementById('prodotto-modal');
 
-  if (foto && typeof foto.showModal === 'function') {
-    const fotoImg = foto.querySelector('.lightbox__img');
-    const fotoTit = foto.querySelector('.lightbox__title');
-    const fotoDes = foto.querySelector('.lightbox__desc');
-    const fotoPre = foto.querySelector('.lightbox__price');
+  if (scheda && typeof scheda.showModal === 'function') {
+    const sImg  = scheda.querySelector('.scheda__img');
+    const sPh   = scheda.querySelector('.scheda__ph');
+    const sTags = scheda.querySelector('.scheda__tags');
+    const sTit  = scheda.querySelector('.scheda__title');
+    const sDes  = scheda.querySelector('.scheda__desc');
+    const sPre  = scheda.querySelector('.scheda__price');
     const testo = (el) => (el ? el.textContent.trim() : '');
 
     root.addEventListener('click', (e) => {
-      const media = e.target.closest('.item__media');
-      if (!media) return;
-      const card = media.closest('.item');
-      const img = media.querySelector('img');
-      if (!img) return;          // foto mai arrivata: non c'e' niente da ingrandire
+      const card = e.target.closest('.item');
+      if (!card) return;
 
-      fotoImg.src = img.currentSrc || img.src;
-      fotoImg.alt = img.alt;
-      fotoTit.textContent = testo(card.querySelector('.item__name'));
-      fotoDes.textContent = testo(card.querySelector('.item__desc'));
-      fotoDes.hidden = fotoDes.textContent === '';
-      fotoPre.textContent = testo(card.querySelector('.item__price'));
+      const media = card.querySelector('.item__media');
+      const img = media.querySelector('img');
+
+      if (img) {
+        sImg.src = img.currentSrc || img.src;
+        sImg.alt = img.alt;
+        sImg.hidden = false;
+        sPh.hidden = true;
+      } else {
+        /* senza foto si riprende il placeholder della card: stessa icona,
+           stesso colore di categoria, cosi' la scheda resta riconoscibile */
+        const ph = media.querySelector('.item__ph');
+        sPh.textContent = ph && ph.firstChild ? ph.firstChild.textContent.trim() : '';
+        sPh.style.background = media.style.background;
+        sPh.hidden = false;
+        sImg.hidden = true;
+        sImg.removeAttribute('src');
+      }
+
+      const tags = card.querySelector('.item__tags');
+      sTags.innerHTML = tags ? tags.innerHTML : '';
+      sTags.hidden = !tags;
+
+      sTit.textContent = testo(card.querySelector('.item__name'));
+      sDes.textContent = testo(card.querySelector('.item__desc'));
+      sDes.hidden = sDes.textContent === '';
+      sPre.textContent = testo(card.querySelector('.item__price'));
 
       document.documentElement.classList.add('has-modal');
-      foto.showModal();
+      scheda.showModal();
     });
 
-    foto.addEventListener('click', (e) => {
-      if (!e.target.closest('.lightbox__fig')) foto.close();
+    scheda.addEventListener('click', (e) => {
+      if (!e.target.closest('.scheda__fig')) scheda.close();
     });
-    foto.querySelectorAll('[data-close]').forEach((b) => {
-      b.addEventListener('click', () => foto.close());
+    scheda.querySelectorAll('[data-close]').forEach((b) => {
+      b.addEventListener('click', () => scheda.close());
     });
-    foto.addEventListener('close', () => {
+    scheda.addEventListener('close', () => {
       document.documentElement.classList.remove('has-modal');
-      fotoImg.removeAttribute('src');   // libera la memoria della foto grande
+      sImg.removeAttribute('src');   // libera la memoria della foto grande
     });
   }
 

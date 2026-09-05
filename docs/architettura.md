@@ -18,15 +18,15 @@ L'unico "runtime" e' **nginx dentro un container Docker** che serve file statici
 (`Dockerfile`), dietro il reverse proxy condiviso del VPS. In locale
 `python3 -m http.server` fa lo stesso lavoro.
 
-Peso totale trasferito: ~64 KB non compressi, di cui 37 KB sono i dati del menu.
+Peso totale trasferito: ~96 KB non compressi, di cui 38 KB sono i dati del menu.
 
 | File              | Peso    |
 | ----------------- | ------- |
-| `index.html`      | 2,7 KB  |
-| `menu.html`       | 3,3 KB  |
-| `ordina.html`     | 5,0 KB  |
-| `css/style.css`   | 14,1 KB |
-| `js/app.js`       | 7,4 KB  |
+| `index.html`      | 3,6 KB  |
+| `menu.html`       | 3,9 KB  |
+| `ordina.html`     | 7,2 KB  |
+| `css/style.css`   | 31,3 KB |
+| `js/app.js`       | 13,5 KB |
 | `js/menu-data.js` | 37,4 KB |
 
 ---
@@ -38,10 +38,10 @@ E' un **multi-page application**. Tre documenti indipendenti:
 | Pagina        | Come nasce il contenuto                    |
 | ------------- | ------------------------------------------ |
 | `index.html`  | 100% HTML statico                          |
-| `ordina.html` | 100% HTML statico                          |
+| `ordina.html` | HTML statico + un modale per la scelta dello store |
 | `menu.html`   | **guscio** statico + griglia costruita dal JS |
 
-Le prime due sono HTML puro: il JS che caricano non fa assolutamente nulla
+La home e' HTML puro: il JS che carica non fa assolutamente nulla
 (vedi "Un solo app.js su tre pagine"). Solo il menu ha una parte generata a
 runtime — un'unica "isola" dinamica dentro un sito altrimenti statico.
 
