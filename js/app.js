@@ -42,7 +42,6 @@
     chipsBox.innerHTML = CATEGORIE.map((c) => `
       <a class="chip" href="#cat-${c.id}" data-cat="${c.id}">
         <span class="chip__ico" aria-hidden="true">${c.icona}</span>${esc(c.nome)}
-        <svg class="ico chip__more" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
       </a>`).join('');
   }
 
@@ -318,6 +317,9 @@
       document.documentElement.classList.add('has-modal');
       catModal.showModal();
     };
+
+    const tasto = document.getElementById('chips-all');
+    if (tasto) tasto.addEventListener('click', apriCategorie);
 
     lista.addEventListener('click', (e) => {
       const voce = e.target.closest('.catlist__item');

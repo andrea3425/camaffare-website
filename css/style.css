@@ -511,10 +511,25 @@ button { font: inherit; }
 }
 
 /* --- chip categorie --- */
+/* Una riga sola a qualsiasi larghezza. A schermo grande le 22 categorie
+   mandate a capo mangiavano mezzo header, e l'header e' fisso: quello spazio
+   veniva tolto al menu per tutta la navigazione. Chi non vuole scorrere ha
+   il tasto "Tutte" qui accanto, che apre l'elenco completo. */
+.chipsbar {
+  display: flex;
+  align-items: center;
+  /* stessa colonna di .wrap: le chip partono allineate al logo, alla ricerca
+     e alla griglia. Il padding laterale lo mettono .chips e il tasto */
+  max-width: var(--wrap);
+  margin-inline: auto;
+}
+
 .chips {
   display: flex;
-  gap: 9px;
-  padding: 14px var(--pad);
+  flex: 1;
+  min-width: 0;
+  gap: 2px;
+  padding: 12px var(--pad);
   overflow-x: auto;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
@@ -525,54 +540,64 @@ button { font: inherit; }
 }
 .chips::-webkit-scrollbar { display: none; }
 
+/* niente bordo ne' riempimento: le voci non scelte sono solo testo, e a
+   riempirsi e' unicamente quella attiva. E' cio' che tiene pulita una fila
+   lunga come questa */
 .chip {
   display: inline-flex;
   align-items: center;
   gap: 7px;
   flex: none;
-  padding: 10px 16px;
-  border: 1px solid var(--line);
+  padding: 10px 15px;
+  border: 0;
   border-radius: var(--r-pill);
-  background: var(--bg);
-  color: var(--ink-soft);
+  background: none;
+  color: var(--ink);
   font-weight: 600;
-  font-size: .9rem;
+  font-size: .94rem;
   white-space: nowrap;
   cursor: pointer;
   scroll-snap-align: center;
   transition: background-color .18s ease, color .18s ease,
-              border-color .18s ease, transform .18s var(--ease),
-              box-shadow .18s ease;
+              transform .18s var(--ease);
 }
 .chip:active { transform: scale(.95); }
 .chip__ico { font-size: 1rem; line-height: 1; }
-/* compare solo sulla chip scelta: e' l'invito a toccarla di nuovo
-   per aprire l'elenco completo */
-.chip__more { display: none; width: 14px; height: 14px; margin-right: -3px; opacity: .8; }
-.chip[aria-current] .chip__more { display: block; }
 .chip[aria-current] {
   background: var(--ink);
-  border-color: var(--ink);
   color: #fff;
 }
 /* categoria senza risultati durante una ricerca: la chip sparisce */
 .chip--off { display: none; }
 
+/* tondo con la sola icona: accanto a chip senza bordo un tasto pieno
+   sembrerebbe la voce selezionata */
+.chips__all {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 40px;
+  height: 40px;
+  margin-right: var(--pad);
+  border: 1px solid rgba(17,18,20,.16);
+  border-radius: 50%;
+  background: none;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background-color .18s ease, border-color .18s ease,
+              transform .18s var(--ease);
+}
+.chips__all .ico { width: 18px; height: 18px; }
+.chips__all:active { transform: scale(.93); }
 @media (hover: hover) {
-  .chip:hover { border-color: rgba(17,18,20,.28); transform: translateY(-1px); }
-  .chip[aria-current]:hover { background: var(--ink); border-color: var(--ink); }
+  .chips__all:hover { background: rgba(17,18,20,.06); border-color: rgba(17,18,20,.3); }
 }
 
-@media (min-width: 1160px) {
-  .chips {
-    max-width: calc(var(--wrap) - var(--pad) * 2 + 24px);
-    margin-inline: auto;
-    flex-wrap: wrap;
-    overflow-x: visible;
-    mask-image: none;
-    -webkit-mask-image: none;
-  }
+@media (hover: hover) {
+  .chip:hover { background: rgba(17,18,20,.06); }
+  .chip[aria-current]:hover { background: var(--ink); }
 }
+
 
 /* ---------- 5b. GRIGLIA MENU ---------- */
 .menu-main { padding-top: 10px; }
@@ -862,12 +887,16 @@ button { font: inherit; }
 }
 
 /* ---------- 6. ORDINA ---------- */
+/* Cinque scelte in colonna non hanno bisogno di 1120px: qui la pagina intera
+   si stringe, header compreso. Prima si stringeva solo il <main>, e su desktop
+   il titolo restava a sinistra mentre le card galleggiavano al centro. */
+.page-order { --wrap: 720px; }
+
 .order {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding-top: 20px;
-  max-width: 660px;
 }
 
 .opt {
