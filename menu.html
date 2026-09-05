@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Menu — Cama'ffare</title>
   <meta name="description" content="Il menu di Cama'ffare: pizze, arancini, calzoni e fritti, gastronomia, cannoli e dolci siciliani, opzioni vegane. Padova, Via Ludovico Ariosto 38.">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#f6f6f8">
 
   <link rel="icon" href="public/logo/logo_red_squared_180.png">
   <link rel="apple-touch-icon" href="public/logo/logo_red_squared_180.png">
@@ -55,20 +55,34 @@
   Prezzi e disponibilità possono variare. Allergeni disponibili in negozio.
 </p>
 
-<nav class="tabbar" aria-label="Navigazione">
-  <a href="index.html">
-    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/></svg>
-    <span>Home</span>
-  </a>
-  <a href="menu.html" class="is-active" aria-current="page">
-    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
-    <span>Menu</span>
-  </a>
-  <a href="ordina.html">
-    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 12H7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
-    <span>Ordina</span>
-  </a>
-</nav>
+<dialog class="modal" id="cat-modal" aria-labelledby="cat-modal-title">
+  <div class="modal__box">
+    <div class="modal__head">
+      <h2 class="modal__title" id="cat-modal-title">Categorie</h2>
+      <button class="modal__close" type="button" data-close aria-label="Chiudi">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <p class="modal__sub">Tocca una categoria per saltarci.</p>
+    <div class="catlist"><!-- generato da js/app.js --></div>
+  </div>
+</dialog>
+
+<dialog class="lightbox" id="foto-modal" aria-labelledby="foto-modal-title">
+  <figure class="lightbox__fig">
+    <button class="lightbox__close" type="button" data-close aria-label="Chiudi">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <img class="lightbox__img" alt="">
+    <figcaption class="lightbox__cap">
+      <div class="lightbox__head">
+        <h2 class="lightbox__title" id="foto-modal-title"></h2>
+        <p class="lightbox__price"></p>
+      </div>
+      <p class="lightbox__desc"></p>
+    </figcaption>
+  </figure>
+</dialog>
 
 <script src="js/menu-data.js"></script>
 <script src="js/app.js"></script>

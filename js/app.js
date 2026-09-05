@@ -42,6 +42,7 @@
     chipsBox.innerHTML = CATEGORIE.map((c) => `
       <a class="chip" href="#cat-${c.id}" data-cat="${c.id}">
         <span class="chip__ico" aria-hidden="true">${c.icona}</span>${esc(c.nome)}
+        <svg class="ico chip__more" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
       </a>`).join('');
   }
 
@@ -57,19 +58,26 @@
       .map((t) => `<span class="tag ${t.classe}">${t.testo}</span>`)
       .join('');
 
-    /* la foto viene rimossa dal DOM se il file non esiste: resta il placeholder */
+    /* la foto viene rimossa dal DOM se il file non esiste: resta il placeholder.
+       In quel caso il riquadro smette anche di essere ingrandibile */
     const img = p.foto
       ? `<img src="${p.foto}" alt="${esc(p.nome)}" loading="lazy" decoding="async"
-              onerror="this.remove()">`
+              onerror="this.closest('.item').classList.add('item--senza-foto'); this.remove()">`
       : '';
 
+    /* con una foto il riquadro e' un <button>: si apre da tastiera, non solo col dito */
+    const media = p.foto
+      ? `<button type="button" class="item__media" style="background:${sfondo}"
+                 aria-label="Ingrandisci la foto di ${esc(p.nome)}">`
+      : `<div class="item__media" style="background:${sfondo}">`;
+
     return `
-      <article class="item">
-        <div class="item__media" style="background:${sfondo}">
+      <article class="item${p.foto ? '' : ' item--senza-foto'}">
+        ${media}
           <span class="item__ph" aria-hidden="true">${icona}<small>foto in arrivo</small></span>
           ${img}
-          ${tags ? `<div class="item__tags">${tags}</div>` : ''}
-        </div>
+          ${tags ? `<span class="item__tags">${tags}</span>` : ''}
+        ${p.foto ? '</button>' : '</div>'}
         <div class="item__body">
           <h3 class="item__name">${esc(p.nome)}</h3>
           ${p.descrizione ? `<p class="item__desc">${esc(p.descrizione)}</p>` : ''}
@@ -93,6 +101,7 @@
     if (!gruppi.length) {
       root.innerHTML = `
         <p class="menu-empty">
+          <span aria-hidden="true">\u{1F50D}</span>
           <strong>Niente da queste parti.</strong>
           Prova con un'altra parola.
         </p>`;
@@ -120,6 +129,7 @@
   let attiva = null;
   let bloccata = false;      // barra congelata durante uno scroll da clic
   let timerSblocco = null;
+  let apriCategorie = null;  // valorizzata piu' sotto, se il browser ha <dialog>
 
   function segnaAttiva(id, centra) {
     if (id === attiva) return;
@@ -129,9 +139,12 @@
       /* aria-current="" varrebbe "false" per lo standard: o 'true' o niente */
       if (on) {
         a.setAttribute('aria-current', 'true');
+        /* solo la chip attiva apre l'elenco, e va dichiarato */
+        if (apriCategorie) a.setAttribute('aria-haspopup', 'dialog');
         if (centra) a.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
       } else {
         a.removeAttribute('aria-current');
+        a.removeAttribute('aria-haspopup');
       }
     });
   }
@@ -163,6 +176,15 @@
   chipsBox.addEventListener('click', (e) => {
     const chip = e.target.closest('.chip');
     if (!chip) return;
+
+    /* seconda toccata sulla categoria gia' scelta: con 22 categorie scorrere la
+       barra e' scomodo, meglio aprirle tutte in un elenco */
+    if (chip.hasAttribute('aria-current') && apriCategorie) {
+      e.preventDefault();
+      apriCategorie();
+      return;
+    }
+
     bloccata = true;
     segnaAttiva(`cat-${chip.dataset.cat}`, false);
     programmaSblocco();   // anche se la pagina non scrolla affatto
@@ -211,6 +233,97 @@
     });
   }
 
+  /* ---------- foto ingrandita ---------- */
+  const foto = document.getElementById('foto-modal');
+
+  if (foto && typeof foto.showModal === 'function') {
+    const fotoImg = foto.querySelector('.lightbox__img');
+    const fotoTit = foto.querySelector('.lightbox__title');
+    const fotoDes = foto.querySelector('.lightbox__desc');
+    const fotoPre = foto.querySelector('.lightbox__price');
+    const testo = (el) => (el ? el.textContent.trim() : '');
+
+    root.addEventListener('click', (e) => {
+      const media = e.target.closest('.item__media');
+      if (!media) return;
+      const card = media.closest('.item');
+      const img = media.querySelector('img');
+      if (!img) return;          // foto mai arrivata: non c'e' niente da ingrandire
+
+      fotoImg.src = img.currentSrc || img.src;
+      fotoImg.alt = img.alt;
+      fotoTit.textContent = testo(card.querySelector('.item__name'));
+      fotoDes.textContent = testo(card.querySelector('.item__desc'));
+      fotoDes.hidden = fotoDes.textContent === '';
+      fotoPre.textContent = testo(card.querySelector('.item__price'));
+
+      document.documentElement.classList.add('has-modal');
+      foto.showModal();
+    });
+
+    foto.addEventListener('click', (e) => {
+      if (!e.target.closest('.lightbox__fig')) foto.close();
+    });
+    foto.querySelectorAll('[data-close]').forEach((b) => {
+      b.addEventListener('click', () => foto.close());
+    });
+    foto.addEventListener('close', () => {
+      document.documentElement.classList.remove('has-modal');
+      fotoImg.removeAttribute('src');   // libera la memoria della foto grande
+    });
+  }
+
+  /* ---------- elenco di tutte le categorie ---------- */
+  const catModal = document.getElementById('cat-modal');
+
+  if (catModal && typeof catModal.showModal === 'function') {
+    const lista = catModal.querySelector('.catlist');
+
+    apriCategorie = () => {
+      /* solo le categorie che in questo momento hanno un gruppo in pagina: durante
+         una ricerca le altre non ci sono e il salto non porterebbe da nessuna parte */
+      lista.innerHTML = CATEGORIE
+        .map((c) => ({ c, gruppo: document.getElementById(`cat-${c.id}`) }))
+        .filter((x) => x.gruppo)
+        .map(({ c, gruppo }) => `
+          <a class="catlist__item" href="#cat-${c.id}" data-cat="${c.id}"
+             ${`cat-${c.id}` === attiva ? 'aria-current="true"' : ''}>
+            <span class="catlist__ico" aria-hidden="true">${c.icona}</span>
+            <span class="catlist__nome">${esc(c.nome)}</span>
+            <span class="catlist__n">${gruppo.querySelectorAll('.item').length}</span>
+          </a>`).join('');
+
+      document.documentElement.classList.add('has-modal');
+      catModal.showModal();
+    };
+
+    lista.addEventListener('click', (e) => {
+      const voce = e.target.closest('.catlist__item');
+      if (!voce) return;
+      e.preventDefault();
+      catModal.close();
+
+      /* stessa logica del clic su una chip: la barra si congela sulla categoria
+         scelta finche' la pagina non e' arrivata */
+      bloccata = true;
+      segnaAttiva(`cat-${voce.dataset.cat}`, true);
+      programmaSblocco();
+
+      const gruppo = document.getElementById(`cat-${voce.dataset.cat}`);
+      if (gruppo) gruppo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    catModal.addEventListener('click', (e) => {
+      if (!e.target.closest('.modal__box')) catModal.close();
+    });
+    catModal.querySelectorAll('[data-close]').forEach((b) => {
+      b.addEventListener('click', () => catModal.close());
+    });
+    catModal.addEventListener('close', () => {
+      document.documentElement.classList.remove('has-modal');
+    });
+  }
+
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', misuraHeader);
 
@@ -218,4 +331,37 @@
   renderMenu();
   misuraHeader();
   onScroll();
+})();
+
+
+/* ============================================================
+   ORDINA — la riga dell'app apre la scelta dello store
+   Se <dialog> non e' supportato o questo script non parte, il link
+   continua a portare a linktr.ee: niente vicolo cieco.
+   ============================================================ */
+(() => {
+  'use strict';
+
+  const apri = document.getElementById('app-opt');
+  const modal = document.getElementById('app-modal');
+  if (!apri || !modal || typeof modal.showModal !== 'function') return;
+
+  apri.addEventListener('click', (e) => {
+    e.preventDefault();
+    modal.showModal();
+  });
+
+  /* clic fuori dal riquadro = chiudi (il backdrop ha come bersaglio il dialog) */
+  modal.addEventListener('click', (e) => {
+    if (!e.target.closest('.modal__box')) modal.close();
+  });
+
+  modal.querySelectorAll('[data-close]').forEach((b) => {
+    b.addEventListener('click', () => modal.close());
+  });
+
+  /* con il modale aperto la pagina dietro non deve scorrere */
+  const bloccaSfondo = (on) => document.documentElement.classList.toggle('has-modal', on);
+  modal.addEventListener('close', () => bloccaSfondo(false));
+  apri.addEventListener('click', () => bloccaSfondo(true));
 })();

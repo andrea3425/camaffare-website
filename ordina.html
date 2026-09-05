@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Ordina — Cama'ffare</title>
   <meta name="description" content="Ordina da Cama'ffare: app Cama'ffare, Just Eat, Glovo, Deliveroo oppure chiama il 049 202 0021.">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#f6f6f8">
 
   <link rel="icon" href="public/logo/logo_red_squared_180.png">
   <link rel="apple-touch-icon" href="public/logo/logo_red_squared_180.png">
@@ -28,6 +28,7 @@
   </div>
 
   <div class="wrap">
+    <p class="appbar__eyebrow">Consegna &amp; asporto · Padova</p>
     <h1 class="appbar__title">Ordina ora</h1>
     <p class="appbar__sub">Scegli il canale che preferisci.</p>
   </div>
@@ -35,13 +36,14 @@
 
 <main class="order wrap">
 
-  <a class="opt opt--app" href="https://linktr.ee/Camaffare" target="_blank" rel="noopener">
+  <a class="opt opt--app" id="app-opt" href="https://linktr.ee/Camaffare" target="_blank" rel="noopener"
+     aria-haspopup="dialog">
     <span class="opt__icon" aria-hidden="true">
       <img src="public/logo/logo_white_squared_180.png" alt="" width="180" height="180">
     </span>
     <span class="opt__text">
       <span class="opt__title">App Cama'ffare</span>
-      <span class="opt__desc">Android e iPhone · tutti i link ufficiali</span>
+      <span class="opt__desc">Scaricala su Android o iPhone</span>
     </span>
     <svg class="ico opt__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
   </a>
@@ -95,20 +97,48 @@
 
 </main>
 
-<nav class="tabbar" aria-label="Navigazione">
-  <a href="index.html">
-    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/></svg>
-    <span>Home</span>
-  </a>
-  <a href="menu.html">
-    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
-    <span>Menu</span>
-  </a>
-  <a href="ordina.html" class="is-active" aria-current="page">
-    <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 12H7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
-    <span>Ordina</span>
-  </a>
-</nav>
+<dialog class="modal" id="app-modal" aria-labelledby="app-modal-title">
+  <div class="modal__box">
+    <div class="modal__head">
+      <h2 class="modal__title" id="app-modal-title">Scarica l'app</h2>
+      <button class="modal__close" type="button" data-close aria-label="Chiudi">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <p class="modal__sub">Il menu e gli ordini direttamente dal telefono.</p>
+
+    <div class="modal__list">
+      <a class="opt opt--android" href="https://play.google.com/store/apps/details?id=com.kuokko.camaffare" target="_blank" rel="noopener">
+        <span class="opt__icon" aria-hidden="true">
+          <svg class="ico" viewBox="0 0 24 24">
+            <path fill="#00D3FF" d="M3.063 2.24a1.5 1.5 0 0 0-.51 1.14v17.24a1.5 1.5 0 0 0 .51 1.14l.06.06 9.66-9.66v-.23L3.123 2.18l-.06.06z"/>
+            <path fill="#00F076" d="M16.073 8.8 4.683 2.32c-.67-.38-1.26-.33-1.62.05l9.72 9.72 3.29-3.29z"/>
+            <path fill="#FF3A44" d="m16.073 15.38-3.29-3.29-9.72 9.72c.36.38.95.43 1.62.05l11.39-6.48z"/>
+            <path fill="#FFCE00" d="m16.003 15.42-3.22-3.22v-.23l3.22-3.22.07.04 3.81 2.17c1.09.62 1.09 1.63 0 2.25l-3.81 2.17-.07.04z"/>
+          </svg>
+        </span>
+        <span class="opt__text">
+          <span class="opt__title">Google Play</span>
+          <span class="opt__desc">Android</span>
+        </span>
+        <svg class="ico opt__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+      </a>
+
+      <a class="opt opt--ios" href="https://apps.apple.com/it/app/camaffare/id1489467327" target="_blank" rel="noopener">
+        <span class="opt__icon" aria-hidden="true">
+          <svg class="ico" viewBox="0 0 24 24"><path d="M17.05 12.54c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3.01-.79-1.55.02-2.98.9-3.78 2.29-1.61 2.79-.41 6.92 1.16 9.19.77 1.11 1.68 2.35 2.87 2.31 1.15-.05 1.59-.74 2.98-.74 1.39 0 1.78.74 3 .72 1.24-.02 2.02-1.13 2.78-2.24.88-1.28 1.24-2.52 1.26-2.59-.03-.01-2.41-.93-2.42-3.72zM14.79 5.6c.64-.77 1.07-1.85.95-2.92-.92.04-2.03.61-2.69 1.38-.59.68-1.11 1.78-.97 2.83 1.03.08 2.07-.52 2.71-1.29z"/></svg>
+        </span>
+        <span class="opt__text">
+          <span class="opt__title">App Store</span>
+          <span class="opt__desc">iPhone e iPad</span>
+        </span>
+        <svg class="ico opt__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <a class="modal__alt" href="https://linktr.ee/Camaffare" target="_blank" rel="noopener">Tutti i link ufficiali</a>
+  </div>
+</dialog>
 
 <script src="js/app.js"></script>
 </body>
