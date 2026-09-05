@@ -162,11 +162,10 @@ button { font: inherit; }
 }
 
 /* ---------- 4. HOME (splash rossa) ---------- */
-.page-home { background: #b81a1d; }
+.page-home { background: var(--rosso); }
 
 .splash {
   position: relative;
-  isolation: isolate;          /* tiene aurora e grana dietro al contenuto */
   min-height: 100svh;
   display: flex;
   flex-direction: column;
@@ -174,52 +173,9 @@ button { font: inherit; }
   align-items: center;
   gap: 28px;
   padding: 40px var(--pad) calc(24px + var(--safe-b));
-  background:
-    radial-gradient(95% 55% at 50% -8%, #ff6b52 0%, rgba(255,107,82,0) 62%),
-    linear-gradient(168deg, #ef3a38 0%, var(--rosso) 40%, #b81a1d 100%);
+  background: var(--rosso);
   color: #fff;
   text-align: center;
-}
-
-/* aurora: macchie sfocate che si muovono piano, danno profondita' al rosso.
-   NB: il ritaglio sta qui e non su .splash, altrimenti su schermi bassi
-   il contenuto verrebbe tagliato senza poter scrollare */
-.splash__aurora {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  overflow: hidden;
-  pointer-events: none;
-}
-.orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(70px);
-  will-change: transform;
-}
-.orb--a { width: 46vmax; height: 46vmax; top: -14%;    right: -12%; background: #ff8a5b; opacity: .5; }
-.orb--b { width: 40vmax; height: 40vmax; bottom: -12%; left: -16%;  background: #ff2f6b; opacity: .42; }
-.orb--c { width: 32vmax; height: 32vmax; top: 40%;     left: 44%;   background: #ffc861; opacity: .26; }
-
-@media (prefers-reduced-motion: no-preference) {
-  .orb   { animation: orb-float 20s ease-in-out infinite alternate; }
-  .orb--b { animation-duration: 26s; animation-delay: -7s; }
-  .orb--c { animation-duration: 32s; animation-delay: -14s; }
-}
-@keyframes orb-float {
-  from { transform: translate3d(0, 0, 0) scale(1); }
-  to   { transform: translate3d(5%, -7%, 0) scale(1.14); }
-}
-
-/* grana: toglie l'effetto "plastica" al gradiente. E' un SVG inline, zero richieste */
-.splash__grain {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: .22;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 .splash__inner {
