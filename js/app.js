@@ -68,17 +68,21 @@
        cliccabile ogni punto e, essendo un vero <button>, si apre anche da
        tastiera. Un <button> non puo' contenere titoli e paragrafi, quindi sta
        sopra al contenuto invece di avvolgerlo. */
+    /* il testo viene prima della foto anche nel DOM: e' quello che conta,
+       per chi legge con uno screen reader come per chi guarda */
     return `
       <article class="item">
-        <div class="item__media" style="background:${sfondo}">
-          <span class="item__ph" aria-hidden="true">${icona}<small>foto in arrivo</small></span>
-          ${img}
-          ${tags ? `<div class="item__tags">${tags}</div>` : ''}
-        </div>
         <div class="item__body">
           <h3 class="item__name">${esc(p.nome)}</h3>
           ${p.descrizione ? `<p class="item__desc">${esc(p.descrizione)}</p>` : ''}
-          <p class="item__price">${euro.format(p.prezzo)}</p>
+          <div class="item__foot">
+            <p class="item__price">${euro.format(p.prezzo)}</p>
+            ${tags ? `<div class="item__tags">${tags}</div>` : ''}
+          </div>
+        </div>
+        <div class="item__media" style="background:${sfondo}">
+          <span class="item__ph" aria-hidden="true">${icona}<small>foto in arrivo</small></span>
+          ${img}
         </div>
         <button type="button" class="item__open" aria-label="Apri ${esc(p.nome)}"></button>
       </article>`;
