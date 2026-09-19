@@ -1,0 +1,167 @@
+id,categoria,product,image_url
+diavola,pizze-solite,Diavola,https://rs-menus-api.roocdn.com/images/b0858bbd-c05a-4e5b-a7c2-6494a69d4397/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+margherita,pizze-solite,Margherita,https://rs-menus-api.roocdn.com/images/7a086244-bdef-426e-a0bc-48da23529e92/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+bufalina,pizze-solite,Bufalina,https://rs-menus-api.roocdn.com/images/3ac8bb8c-cdad-4d23-83af-b1bd05c07cc1/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+prosciutto-e-funghi,pizze-solite,Prosciutto e funghi,https://rs-menus-api.roocdn.com/images/487f5e5e-756a-49a7-a323-46e9c866a335/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+4-formaggi,pizze-solite,4 formaggi,https://rs-menus-api.roocdn.com/images/4b801e2d-c3dc-42b5-bcbc-f1b6858e53fa/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+tonno-e-cipolla,pizze-solite,Tonno e cipolla,https://rs-menus-api.roocdn.com/images/cce9b307-4e0e-4fbc-86ab-a4e25c46ce10/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+viennese,pizze-solite,Viennese,https://rs-menus-api.roocdn.com/images/9d374738-9639-4c30-bbaa-e29a33129e0a/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+prosciutto-cotto,pizze-solite,Prosciutto cotto,https://rs-menus-api.roocdn.com/images/6e810bec-83de-4e80-8d65-2d87c7e37540/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+capricciosa,pizze-solite,Capricciosa,https://rs-menus-api.roocdn.com/images/181335ce-37f1-4030-a251-509f607ce844/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+vegetariana,pizze-solite,Vegetariana,https://rs-menus-api.roocdn.com/images/3089bc52-f9bc-458e-b07f-b0aec18f396d/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+boscaiola,pizze-solite,Boscaiola,https://rs-menus-api.roocdn.com/images/d1492f5d-b030-4ca0-8d9d-33a8eaa8bb93/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+capricciosa-siciliana,pizze-solite,Capricciosa siciliana,https://rs-menus-api.roocdn.com/images/b83b48fe-78d8-49db-9120-7878f45a28d3/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+romana,pizze-solite,Romana,https://rs-menus-api.roocdn.com/images/0ffbbbc8-3e42-43e5-9d7f-1a26f356c561/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+funghi,pizze-solite,Funghi,https://rs-menus-api.roocdn.com/images/ffa19995-ad8e-40f3-968c-356382c5388a/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+marinara,pizze-solite,Marinara,https://rs-menus-api.roocdn.com/images/80ffd8c8-a181-429c-a3bb-0a05ae49ebc1/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzone,pizze-solite,Calzone,
+a-carusa,pizze-storiche,A'carusa,https://rs-menus-api.roocdn.com/images/50e23979-3f4a-4b39-ac4c-bef5e235a486/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+u-figghiu,pizze-storiche,U'figghiu,https://rs-menus-api.roocdn.com/images/46bf8a4f-92ad-4bdd-8fb5-c8b5cb1dbeb8/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-vucciria,pizze-storiche,A'vucciria,https://rs-menus-api.roocdn.com/images/949af5af-0623-47ee-ab45-2bdd3bf74d3e/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+u-scunchiurutu,pizze-storiche,U'scunchiurutu,https://rs-menus-api.roocdn.com/images/ffe094ce-ba58-43c5-933e-1ffcc42a654d/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-fimminedda,pizze-storiche,A'fimminedda,https://rs-menus-api.roocdn.com/images/ae21827d-5164-40cb-9e4b-0b7fb08b885e/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-cama-ffare,pizze-storiche,A'cama'ffare,https://rs-menus-api.roocdn.com/images/7a1e43bc-b854-459c-91dd-8b7c48cf5dc2/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-babba,pizze-storiche,A'babba,https://rs-menus-api.roocdn.com/images/c0fbf0fb-108e-45d1-9223-67ab03b6bf90/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+u-mafiusu,pizze-storiche,U'mafiusu,https://rs-menus-api.roocdn.com/images/01e8bd46-ac7f-4615-b2e1-0d9887a29a75/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+u-spacchiusu,pizze-storiche,U'spacchiusu,https://rs-menus-api.roocdn.com/images/fe7abe3d-14e3-41a3-ba61-8f636319393f/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+u-fitusu,pizze-storiche,U'fitusu,https://rs-menus-api.roocdn.com/images/03b23fc0-7dbd-40ce-9eb2-5c8930df2c9e/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-pilusa,pizze-storiche,A'pilusa,https://rs-menus-api.roocdn.com/images/e3263e8c-16ac-40ef-b50e-4395896849b8/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+u-pecuraro,pizze-storiche,U'pecuraro,https://rs-menus-api.roocdn.com/images/78c7c743-b086-481a-9f18-f8a162d70012/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-strammata,pizze-storiche,A'strammata,https://rs-menus-api.roocdn.com/images/e288bed0-013a-42e3-bef7-88ada7418575/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+u-cannavazzu,pizze-storiche,U'cannavazzu,https://rs-menus-api.roocdn.com/images/8fd8c4f9-894f-4805-b7f9-e74532e4114b/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-cammurria,pizze-storiche,A'cammurria,https://rs-menus-api.roocdn.com/images/d5f1a275-5ad0-4651-ad16-909bde995935/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+futtitinni,pizze-storiche,Futtitinni,https://rs-menus-api.roocdn.com/images/6def37b9-a35e-4fee-ac2a-1cfa4d845fa2/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+u-picciriddu,pizze-storiche,U'picciriddu,https://rs-menus-api.roocdn.com/images/826c82f3-82cb-4659-9398-f5439639d2d7/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-tumpulata,pizze-storiche,A'tumpulata,https://rs-menus-api.roocdn.com/images/642633cb-b1e6-4c1d-8982-f80540183954/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-minchiata,pizze-storiche,A'minchiata,https://rs-menus-api.roocdn.com/images/2b5e1abc-fd41-40b8-aaed-7f59a46d4ebc/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+u-beddu,pizze-storiche,U'beddu,
+a-zzita,pizze-storiche,A'zzita,https://rs-menus-api.roocdn.com/images/e1cdb40e-26d7-4c5e-9916-9864a157cd1d/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-cucuzza,pizze-storiche,A'cucuzza,
+u-cuppino,pizze-storiche,U'cuppino,
+a-strafalaria,pizze-storiche,A'strafalaria,https://rs-menus-api.roocdn.com/images/39aaf945-e34c-4e97-9931-1181ede85c5a/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-siciliana,pizze-bianche,A'Siciliana,https://rs-menus-api.roocdn.com/images/fd53340d-85bd-4031-af33-46fffec011fe/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+agrigentina,pizze-bianche,Agrigentina,https://rs-menus-api.roocdn.com/images/6d4c130d-95a5-43ac-b149-30f051b969fd/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-carrapipana,pizze-bianche,A'carrapipana,https://rs-menus-api.roocdn.com/images/b41c8c11-b106-4306-a565-854c93d19a33/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-catanisa,pizze-bianche,A'catanisa,https://rs-menus-api.roocdn.com/images/959f2013-0fde-4a0b-a1d2-9a77bb58d8ef/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-innisa,pizze-bianche,A'innisa,https://rs-menus-api.roocdn.com/images/a4f136f6-038a-4234-845e-821ccb9f1b2b/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-missinisa,pizze-bianche,A'missinisa,https://rs-menus-api.roocdn.com/images/8efb2f33-81c8-47a3-80df-de87d9ec9b39/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-nissena,pizze-bianche,A'nissena,https://rs-menus-api.roocdn.com/images/ee5e14a8-f7ab-4a04-8a6f-b5d237ca26d8/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-palermitana,pizze-bianche,A'palermitana,https://rs-menus-api.roocdn.com/images/0fa3b01e-ba75-4f81-8bd7-d5c52d8e6ff9/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-ragusana,pizze-bianche,A'ragusana,https://rs-menus-api.roocdn.com/images/2cbe3cee-205d-4ef8-a9ad-1b1348b73367/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-siracusana,pizze-bianche,A'siracusana,
+a-trapanisa,pizze-bianche,A'trapanisa,https://rs-menus-api.roocdn.com/images/c1e98a22-59fa-400f-b3f2-eb342dd64116/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+bronsa-cuerta,pizze-venete,Bronsa cuerta,https://rs-menus-api.roocdn.com/images/71a71fe1-b9ac-4016-90ad-e0b89506d157/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+oce-oce,pizze-venete,Oce Oce,https://rs-menus-api.roocdn.com/images/cd5c0e39-5fd7-47c0-b00e-4a1e5424ed50/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+strafanto,pizze-venete,Strafanto,https://rs-menus-api.roocdn.com/images/9a55e9d1-9508-4771-8d9e-5fcb8b4b4c4d/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+vecia,pizze-venete,Vecia,https://rs-menus-api.roocdn.com/images/fc71f607-8738-45c7-9d80-a0275555fbaf/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+onto,pizze-venete,Onto,https://rs-menus-api.roocdn.com/images/d3f9826d-254a-4552-9ecc-6e4f16c63204/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+scarsea,pizze-venete,Scarsea,https://rs-menus-api.roocdn.com/images/a29d9ce3-0327-460d-83fb-6b78ac2cf3fc/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+selvadego,pizze-venete,Selvadego,https://rs-menus-api.roocdn.com/images/2aeba2cb-b0e5-48a4-a845-84c15ccca82e/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+rabalta,pizze-venete,Rabaltà,https://rs-menus-api.roocdn.com/images/577e04ca-2454-4fb7-ad82-675e2de1f587/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+baucca,pizze-venete,Baucca,https://rs-menus-api.roocdn.com/images/2fee8099-4671-4e92-9c68-a3e5d0ccb166/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+mona,pizze-venete,Mona,https://rs-menus-api.roocdn.com/images/3efc30cf-9bce-4bc9-88da-1011650ce4b3/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+indrio,pizze-venete,Indrio,https://rs-menus-api.roocdn.com/images/f57f792d-ef12-4b38-8b5b-48580fdc4372/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+sebastian,pizze-vegane,Sebastian,
+cinzia,pizze-vegane,Cinzia,
+adolfo,pizze-vegane,Adolfo,
+mimmo,pizze-vegane,Mimmo,https://rs-menus-api.roocdn.com/images/ce6f9350-b4d6-4a69-8681-15b6b0b5b3e1/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+stefy,pizze-vegane,Stefy,https://rs-menus-api.roocdn.com/images/6584c72c-1a50-40a2-9704-5672f8bc2f74/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+sara,pizze-vegane,Sara,
+rosalia,pizze-vegane,Rosalia,https://rs-menus-api.roocdn.com/images/0d317109-1b30-4a68-be26-da3f2dc6a146/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-ciaula,pizze-novita,A'ciaula,https://rs-menus-api.roocdn.com/images/ae9cb220-0176-4d18-9cff-9bf9576705c7/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-quartara,pizze-novita,A'quartara,https://rs-menus-api.roocdn.com/images/93a0740b-3979-4aed-89c1-dddf762ee64f/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-bagascia,pizze-novita,A'bagascia,
+m-bare,pizze-novita,M'bare,
+u-tumazzu,pizze-novita,U'tumazzu,
+a-prescia,pizze-novita,A'prescia,
+a-puveredda,pizze-novita,A' Puveredda,https://rs-menus-api.roocdn.com/images/30114d83-5bb3-43c9-b918-8a40ff5d39a0/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+milingiana-1,milingiana-friuta,Milingiana 1,https://rs-menus-api.roocdn.com/images/72f54577-684a-43fa-9701-be292131fc15/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+milingiana-2,milingiana-friuta,Milingiana 2,https://rs-menus-api.roocdn.com/images/957c89a3-4db4-4168-8195-12dab4639c16/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+milingiana-3,milingiana-friuta,Milingiana 3,https://rs-menus-api.roocdn.com/images/70909000-8fc0-4b6e-8e8d-789643853509/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+milingiana-4,milingiana-friuta,Milingiana 4,https://rs-menus-api.roocdn.com/images/b11fee0e-0659-4a92-8c57-63b05ad49adc/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+milingiana-5,milingiana-friuta,Milingiana 5,https://rs-menus-api.roocdn.com/images/a1f01aa3-0496-4f22-9898-c660e8826023/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+milingiana-6,milingiana-friuta,Milingiana 6,https://rs-menus-api.roocdn.com/images/957c89a3-4db4-4168-8195-12dab4639c16/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+milingiana-7,milingiana-friuta,Milingiana 7,https://rs-menus-api.roocdn.com/images/fd3285fb-b5b2-4952-a081-b20ddbafcc2c/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+i-patat-1,i-patat,I patat 1,https://rs-menus-api.roocdn.com/images/f6f11b80-9855-4ff1-9ee6-738658597d30/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+i-patat-2,i-patat,I patat 2,https://rs-menus-api.roocdn.com/images/19261feb-5494-487a-8ae1-c0e5384d2b87/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+i-patat-3,i-patat,I patat 3,https://rs-menus-api.roocdn.com/images/512bc301-c466-4933-b9c8-96066f1499c4/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+i-patat-4,i-patat,I patat 4,https://rs-menus-api.roocdn.com/images/ace720b9-dfd7-4ccd-ad58-0880f82e947a/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+i-patat-5,i-patat,I patat 5,https://rs-menus-api.roocdn.com/images/056287d3-8d92-4eef-a833-89e825f4b5f7/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+i-patat-6,i-patat,I patat 6,https://rs-menus-api.roocdn.com/images/6fd39527-f6a7-43ff-81dd-5fc9160cad3d/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+i-patat-7,i-patat,I patat 7,https://rs-menus-api.roocdn.com/images/3d1bb4d7-aa00-4705-b6fa-c962335004b9/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+i-patat-8,i-patat,I patat 8,https://rs-menus-api.roocdn.com/images/9b9ae115-226e-483f-a6e5-03ab8747a707/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+i-patat-9,i-patat,I patat 9,
+calzone-farcito,calzone,Calzone farcito,
+l-hamburgherino,calzoncini,L'hamburgherino,https://rs-menus-api.roocdn.com/images/e2be2183-2bef-442e-a583-8650a251beeb/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzoncino-10,calzoncini,Calzoncino 10,https://rs-menus-api.roocdn.com/images/2e746c66-d46d-471c-8820-5b7a68d2d930/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzoncino-11,calzoncini,Calzoncino 11,https://rs-menus-api.roocdn.com/images/f8a855aa-0a65-480d-b9cf-0a13c6d61395/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzoncino-4,calzoncini,Calzoncino 4,https://rs-menus-api.roocdn.com/images/92848a1d-ccb0-4c75-8184-6f78ad9129dc/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzoncino-1,calzoncini,Calzoncino 1,https://rs-menus-api.roocdn.com/images/84310ba7-cf13-44b2-903d-83af0e806a61/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzoncino-3,calzoncini,Calzoncino 3,https://rs-menus-api.roocdn.com/images/95e3c817-3b9b-4621-801c-75fbd4f881f1/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzoncino-5,calzoncini,Calzoncino 5,https://rs-menus-api.roocdn.com/images/502beac6-cd4b-4b5b-a78e-aa2dfda43a4e/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzoncino-2,calzoncini,Calzoncino 2,https://rs-menus-api.roocdn.com/images/05029717-2e37-4c46-9900-2f623ea9d04e/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzoncino-6,calzoncini,Calzoncino 6,https://rs-menus-api.roocdn.com/images/02c817cc-b672-474c-a20a-984bcca9fbdf/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzoncino-9,calzoncini,Calzoncino 9,https://rs-menus-api.roocdn.com/images/0ed4fdd9-8f64-4d55-9c6e-c0e9e9d0a8de/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzoncino-12,calzoncini,Calzoncino 12,https://rs-menus-api.roocdn.com/images/52b9a85e-1e6b-436f-adb4-5acc4e2d6306/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzoncino-8,calzoncini,Calzoncino 8,https://rs-menus-api.roocdn.com/images/b39a6d93-9ea6-4198-b2c6-90228744d59e/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzone-fritto-3,calzoni-fritti,Calzone fritto 3,https://rs-menus-api.roocdn.com/images/bc0b11d3-e5b5-4cdd-91b9-77f763c819c6/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzone-fritto-1,calzoni-fritti,Calzone fritto 1,https://rs-menus-api.roocdn.com/images/4029ab8e-575b-45b3-b9f7-415e8253ba11/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+calzone-fritto-2,calzoni-fritti,Calzone fritto 2,https://rs-menus-api.roocdn.com/images/3b24eb02-9879-41e9-9878-247121b74170/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+panino-2,panini,Panino 2,
+panino-3,panini,Panino 3,
+panino-1,panini,Panino 1,
+arancino-1,arancini,Arancino 1,https://rs-menus-api.roocdn.com/images/628a0c7a-a434-49b9-9d1b-f73a6afe56e0/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-2,arancini,Arancino 2,https://rs-menus-api.roocdn.com/images/585e6e20-0afb-4de7-8d5f-187617085267/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-3,arancini,Arancino 3,https://rs-menus-api.roocdn.com/images/b4d3b460-413e-4439-954d-4a9510b2d19d/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-4,arancini,Arancino 4,https://rs-menus-api.roocdn.com/images/44ff576d-270e-49ce-ac73-1ecab22c56a4/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-5,arancini,Arancino 5,https://rs-menus-api.roocdn.com/images/4b670ad1-c486-498a-a091-c6050d26874e/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-6,arancini,Arancino 6,https://rs-menus-api.roocdn.com/images/723c608e-c252-45f0-9502-bf2e494b82f3/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-7,arancini,Arancino 7,https://rs-menus-api.roocdn.com/images/76638b75-2044-42cd-9780-b1c7c2ef8c8b/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-8,arancini,Arancino 8,https://rs-menus-api.roocdn.com/images/f95864b4-36eb-4c86-8d4b-b519841fedc3/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-9,arancini,Arancino 9,https://rs-menus-api.roocdn.com/images/45686c62-0109-4dc4-8ec5-0dd38f607528/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-10,arancini,Arancino 10,https://rs-menus-api.roocdn.com/images/8a5aade3-9ef4-42e4-ae8e-1bd89cbe2707/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-11,arancini,Arancino 11,https://rs-menus-api.roocdn.com/images/6c833018-3513-480d-a75a-00fe7e25ce50/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-12,arancini,Arancino 12,https://rs-menus-api.roocdn.com/images/f696ce59-599f-4d02-849a-3d47e94f0679/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-13,arancini,Arancino 13,https://rs-menus-api.roocdn.com/images/848f9070-64f3-485a-8e74-7784167be240/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-14,arancini,Arancino 14,https://rs-menus-api.roocdn.com/images/51d3f6e8-62b7-4a3b-97a2-e3d03b65cf58/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-15,arancini,Arancino 15,https://rs-menus-api.roocdn.com/images/e764c884-7d06-4707-82f9-52976c20fcc0/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+arancino-16,arancini,Arancino 16,https://rs-menus-api.roocdn.com/images/848f9070-64f3-485a-8e74-7784167be240/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+patatine-fritte,fritti,Patatine fritte,
+crocche,fritti,Crocchè,
+jalapenos,fritti,Jalapenos,
+olive-ascolane,fritti,Olive ascolane,
+mozzarelline,fritti,Mozzarelline,
+panelle-6-pezzi,pane-panelle,Panelle 6 pezzi,
+pane-e-panelle-condito,pane-panelle,Pane e panelle condito,
+pane-e-panelle-con-mortadella-e-fettine-di-limone,pane-panelle,Pane e panelle con mortadella e fettine di limone,
+anelletti-palermitani-al-forno,specialita,Anelletti palermitani al forno,https://rs-menus-api.roocdn.com/images/927e5d23-dd92-4467-a9e1-4c60f733acb8/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+sfincione,specialita,Sfincione,
+rollo-di-wurstel,specialita,Rollò di wurstel,
+parmigiana,specialita,Parmigiana,
+cipollina,specialita,Cipollina,https://rs-menus-api.roocdn.com/images/4f92aaca-45dd-4276-bf74-791c8257f23e/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+ravazzata-al-ragu-e-piselli,specialita,Ravazzata al ragù e piselli,
+pizza-tiramisu,dolci,Pizza tiramisù,
+cannolo-siciliano,dolci,Cannolo siciliano,https://rs-menus-api.roocdn.com/images/a83128a3-2d43-4e01-b419-0c5e66d037d6/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+cannolo-siciliano-al-pistacchio,dolci,Cannolo siciliano al pistacchio,
+cassatina-palermitana,dolci,Cassatina palermitana,https://rs-menus-api.roocdn.com/images/f5827760-6230-437c-a592-7eab59bfa28f/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+pizza-alla-nutella,pizze-dolci,Pizza alla nutella,
+pizza-alla-nutella-e-pistacchio,pizze-dolci,Pizza alla nutella e pistacchio,
+coca-cola-1lt,bevande,Coca-Cola 1lt,https://rs-menus-api.roocdn.com/images/feaf3d60-2a98-4adc-af0d-1949b3a60b48/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+coca-cola-zero-33cl,bevande,Coca-Cola Zero 33cl,https://rs-menus-api.roocdn.com/images/c3e9ff85-3d17-4e4f-ab10-24b71afd3080/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+coca-cola-33cl,bevande,Coca-Cola 33cl,https://rs-menus-api.roocdn.com/images/1100e3d8-ff52-49f9-99ff-1b01d2c94ce3/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+acqua-naturale-50cl,bevande,Acqua naturale 50cl,https://rs-menus-api.roocdn.com/images/c269398c-b7c0-43d8-9d96-8b5edc3d30d0/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+fanta-33cl,bevande,Fanta 33cl,https://rs-menus-api.roocdn.com/images/bd66ab3a-4215-42af-80ae-56d384cfa930/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+acqua-frizzante-50cl,bevande,Acqua frizzante 50cl,https://rs-menus-api.roocdn.com/images/72b114f3-3a57-43ac-9abe-763d587eac1c/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+sprite-33cl,bevande,Sprite 33cl,https://rs-menus-api.roocdn.com/images/27c1128c-4198-4a5e-b7b7-c0ddc0fd3658/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+te-al-limone-33cl,bevande,Tè al limone 33cl,https://rs-menus-api.roocdn.com/images/d44575a6-de31-4419-8cba-474fe950ebe0/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+te-alla-pesca-33cl,bevande,Tè alla pesca 33cl,https://rs-menus-api.roocdn.com/images/03e42730-f7b6-4395-91e8-49c641e5eddb/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+moretti-66cl,birre,Moretti 66cl,https://rs-menus-api.roocdn.com/images/9208675e-8ccd-4a83-a753-9aa80f89c8b5/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-miriusa,birre,A' Miriusa,https://rs-menus-api.roocdn.com/images/9377055e-f988-4968-a20e-67fee6b87f3a/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-smaniusa,birre,A' Smaniusa,https://rs-menus-api.roocdn.com/images/c41a10cc-58de-44a9-8c1d-b04d23fd657c/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-licca,birre,A' Licca,https://rs-menus-api.roocdn.com/images/c2c37097-4f5f-4c65-aff5-3f280fb272f9/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+messina-33cl,birre,Messina 33cl,
+ceres-33cl,birre,Ceres 33cl,https://rs-menus-api.roocdn.com/images/74ebfa54-da02-4138-be44-49d94c06e416/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+a-raggiata,birre,A' Raggiata,https://rs-menus-api.roocdn.com/images/7fdbd6cd-f4c0-4cdc-8fce-fa2200baf494/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+messina-cristalli-di-sale-50cl,birre,Messina Cristalli di Sale 50cl,
+menza-parola,t-shirt,Menza parola,https://rs-menus-api.roocdn.com/images/917ec924-c309-4706-90a3-b4842a6fd252/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop
+scegli-il-menu,meal-deals,Scegli il Menù,https://rs-menus-api.roocdn.com/images/96f58f64-7e9e-4e6d-a79d-0aff236f482e/image.jpeg?width={w}&height={h}&auto=webp&format=jpg&fit=crop

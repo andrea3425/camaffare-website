@@ -94,3 +94,11 @@ Prerequisiti sul VPS al primo deploy:
 3. Repo infra con nginx-proxy + acme-companion in esecuzione.
 
 Poi: `docker compose up -d --build`.
+
+## Aggiornare menu
+
+```
+rsync -avz --delete --progress ./menu root@159.65.90.60:~/repos/camaffare-website
+```
+
+NB. con delete sostituisce la cartella; senza delete fa un merge.
